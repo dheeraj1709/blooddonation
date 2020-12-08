@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root{
+    --background-color:  rgb(184, 178, 238);
+    --upper-color: rgba(0,0,0,0.8);
+    --navbar-color: rgba(0,0,0,0.8);
+    --navbar: rgb(37, 35, 47);
+}
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.signup_backdiv{
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.signup_block{
+    position: absolute;
+    top: 2rem;
+    box-sizing: border-box;
+    left: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 1rem;
+    display: flex;
+}
+.signup_right,.signup_left{
+    width: 50%;
+    background:  var(--upper-color);
+    height: 100%;
+}
+.loginInstead{
+    display: flex;
+    justify-content: center;
+}
+.loginInstead i,.loginInstead a{
+    font-size: 1rem !important;
+}
+.signup_right{
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.signup_left{
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.signup_slider{
+    display:flex;
+    position: absolute;
+    right: 0;
+    bottom: -1rem;
+    top: -1rem;
+    background: rgb(244, 239, 255);
+    width: 50%;
+    transform:translateX(0%);
+    transition-duration: 1s;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 1;
+}
+.slide{
+    transform:translateX(-100%);
+}
+.signup_hospital_div,.signup_receiver_div{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+.signup_hospital,.signup_receiver{
+    font-size: 2rem;
+    font-weight: 700;
+    /* display: flex; */
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+    padding-top:5rem;
+}
+.signup_hospital{
+    /* display: none; */
+    transition-duration: 1s;
+    transform:translateX(-200%);
+}
+.slide .signup_hospital{
+    transform:translateX(00%);
+}
+.slide .signup_receiver{
+    transform:translateX(200%);
+}
+.signup_receiver{
+    transition-duration: 1s;
+    transform:translateX(-100%);
+}
+.signup_hospital span,.signup_receiver span:nth-child(1){
+    display: flex;
+    justify-content: center;
+}
+.pages_wrapper{
+    display: flex;
+}
+.home_mainWrapper{
+    background: var(--background-color);
+    height: 100vh;
+    width: 80%;
+    overflow: hidden;
+}
+.navbar{
+    height: 100vh;
+    width: 20%;
+    background: var(--navbar);
+    position: relative;
+}
+.home_wrapper{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    justify-content: space-around;
+    padding-left: 1rem;
+}
+.verticalBlock_upper{
+    height:5rem;
+    float: right;
+    display: flex;
+    right: 0;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    margin-left: 80%;
+}
+.verticalBlock_middle,.verticalBlock_bottom{
+    height:10rem;
+}
+.verticalBlock_upper{
+    background-color: var(--navbar-color);
+    width:auto;
+    position: relative;
+}
+.verticalBlock_middle{
+    display: flex;
+    width: 100%;
+    background-color: var(--navbar-color);
+}
+.cardParent{
+    width: 12.5%;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+    background: rgba(255,255,255,1);
+}
+.carParent.unavailable{
+    background: rgba(255,255,255,0.4);
+}
+.verticalBlock_bottom{
+    background-color: var(--navbar-color);
+    /* position:absolute;
+    bottom: 2rem; */
+}
+.plus_icon{
+    top: 20%;
+    right: 1rem;
+    position: absolute;
+    cursor: pointer;
+    background: var(--background-color);
+    border-radius: 10px;
+}
+.plus_icon img{
+    height: 3rem;
+}
+.input_div{
+    display: flex;
+    font-size:1rem;
+}
+.signup_receiver_form,.signup_hospital_form{
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 5rem);
+    position: relative;
+    align-items: center;
+    z-index: 0;
+}
+.signup_receiver_form > button,.signup_hospital_form > button{
+    height: 1.5rem;
+}
+.signup_label{
+    width: 10rem;
+}
+.signup_heading{
+    /* padding-bottom: 5rem; */
+}
+.logout_tab{
+    color: white;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2)
+}
+.logout_tab > *{
+    padding:0.25rem 0.5rem;
+}
+.NameIcon{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+.NameIconChild{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    background: rgba(255,255,255,1);
+}
+.viewAllIcon{
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    right: 5rem;
+    top: 20%;
+    cursor: pointer;
+}
+.viewAllIcon > img{
+    height: 40px;
+    background: rgb(184,178,238);
+    padding: 0.3rem;
+    border-radius: 10px;
+}
+.viewRequests{
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    right: 9rem;
+    top: 20%;
+    cursor: pointer;
+}
+.viewRequests > img{
+    height: 40px;
+    background: rgb(184,178,238);
+    padding: 0.3rem;
+    border-radius: 10px;
+}
+.modal{
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.6);
+    position:fixed;
+    display:none;
+}
+.modal_box{
+    width: 40%;
+    height:60%;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    background: rgba(255,255,255,1);
+}
+/* .modal_header{} */
+/* .modal_body{} */
+/* .modal_footer{} */
